@@ -7,7 +7,7 @@ export default function Home() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-2">
           <Link href="/" className="flex items-center">
             <img
-              src="/grote logo.png"
+              src="/grote-logo.png"
               alt="Trouwgoud"
               className="h-32 w-auto object-contain"
             />
