@@ -4,12 +4,12 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-[#f8f6f2] text-stone-950">
       <header className="sticky top-0 z-50 border-b border-stone-200 bg-white/90 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-2">
+        <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
           <Link href="/" className="flex items-center">
             <img
               src="/grote-logo.png"
               alt="Trouwgoud"
-              className="h-32 w-auto object-contain"
+              className="h-20 w-auto object-contain"
             />
           </Link>
 

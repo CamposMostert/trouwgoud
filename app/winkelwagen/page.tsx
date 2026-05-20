@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 
 type CartItem = {
   id: string;
@@ -13,15 +13,17 @@ type CartItem = {
   quantity: number;
 };
 
-export default function WinkelwagenPage() {
-  const [cart, setCart] = useState<CartItem[]>([]);
+function getSavedCart() {
+  if (typeof window === "undefined") {
+    return [];
+  }
 
-  useEffect(() => {
-    const savedCart = localStorage.getItem("cart");
-    if (savedCart) {
-      setCart(JSON.parse(savedCart));
-    }
-  }, []);
+  const savedCart = localStorage.getItem("cart");
+  return savedCart ? JSON.parse(savedCart) : [];
+}
+
+export default function WinkelwagenPage() {
+  const [cart, setCart] = useState<CartItem[]>(getSavedCart);
 
   function saveCart(newCart: CartItem[]) {
     setCart(newCart);
