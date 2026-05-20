@@ -4,9 +4,13 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-[#f8f6f2] text-stone-950">
       <header className="sticky top-0 z-50 border-b border-stone-200 bg-white/90 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-          <Link href="/" className="text-2xl font-semibold tracking-wide">
-            Trouwgoud
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-2">
+          <Link href="/" className="flex items-center">
+            <img
+              src="/grote logo.png"
+              alt="Trouwgoud"
+              className="h-32 w-auto object-contain"
+            />
           </Link>
 
           <nav className="hidden gap-8 text-sm md:flex">
@@ -60,7 +64,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+        <div className="gold-line mx-auto max-w-5xl"></div>
       <section id="collectie" className="mx-auto max-w-7xl px-6 py-24">
         <div className="mb-14 text-center">
           <p className="mb-3 text-sm uppercase tracking-[0.3em] text-stone-500">
